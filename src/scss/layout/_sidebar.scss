@@ -1,0 +1,22 @@
+.sidebar {
+  display: grid;
+  grid-template-rows: 10rem calc(97vh - 10rem );
+
+  &__nav {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom: 1px solid var(--grey);
+
+
+    &--icon {
+      width: 3rem;
+      height: 3rem;
+      fill: var(--dark);
+    }
+  }
+
+
+}

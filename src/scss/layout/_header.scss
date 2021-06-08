@@ -1,0 +1,13 @@
+.header {
+
+    grid-column: full-start / full-end;
+    align-self: center;
+
+    display: grid;
+    grid-template-rows: 10rem;
+    border-bottom: 1px solid var(--grey);
+    margin-left: -5rem;
+    padding-left: 5rem;
+
+}
+

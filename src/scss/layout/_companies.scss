@@ -1,0 +1,12 @@
+.compaines {
+
+  &__logo {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
+    grid-template-rows: 35rem;
+    align-items: center;
+    justify-items: center;
+  }
+}

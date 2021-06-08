@@ -1,0 +1,51 @@
+   <footer class="footer">
+      <div class="container">
+         <div class="footer__text">
+            <h6>Datahouse</h6>
+            <div class="footer__contact">
+               <a href="">0224 272 93 90</a>
+               <a href="">info@datahouse.com</a>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+   <script src="assets/js/main.js"></script>
+   <script src="assets/js/jquery-slim.min.js"></script>
+   <script src="assets/js/flickity.pkgd.min.js"></script>
+   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDszDnpoMeF_YPdbZw0wvpjsqtljXeuGFA&sensor=true"></script>
+   <script src="assets/js/jquery.gmap.js"></script>
+   <script type="text/javascript">
+
+       $('#map').gMap({
+
+           latitude: 40.194679,  
+           longitude: 29.0606437,
+           maptype: 'ROADMAP',
+           zoom: 15,
+           markers: [
+               {
+               latitude: 40.194679,  
+               longitude: 29.0606437,
+                   html: '<div style="width: 400px;"><h4 style="margin-bottom: 20px;"><strong>DATAHOUSE TRAINING</strong></br></h4><p>Kırcaali Mah. Fevzi Çakmak Cad. Kayalı Sokak. Tuğcu Plaza-1 Kat:3 Osmangazi, Bursa /TÜRKİYE </p></div>',
+                   icon: {
+                       image: "assets/img/marker.png",
+                       iconsize: [32, 46],
+                       iconanchor: [13,39]
+                   }
+               }
+           ],
+           doubleclickzoom: false,
+           controls: {
+               panControl: true,
+               zoomControl: true,
+               mapTypeControl: true,
+               scaleControl: false,
+               streetViewControl: false,
+               overviewMapControl: false
+           }
+       });
+
+   </script>
+   </body>
+ </html>

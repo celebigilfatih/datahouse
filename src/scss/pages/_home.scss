@@ -1,0 +1,34 @@
+
+
+.aboutus {
+
+    &__paragraph {
+
+        margin-top: 3rem;
+    }
+
+    &__link {
+
+        display: flex;
+        margin-top: 5rem;
+        text-decoration: underline;
+        font-weight: bold;
+
+
+        &:hover {
+
+            color: var(--primary);
+        }
+    }
+    &__text {
+
+        padding-right: 3rem;
+    }
+}
+
+
+
+.features {
+
+    background: url(/assets/img/datahouse-features.png);
+}
