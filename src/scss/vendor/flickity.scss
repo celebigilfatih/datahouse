@@ -125,7 +125,7 @@ https://flickity.metafizzy.co
   display: inline-block;
   width: 7rem;
   height: .7rem;
-  background: var(--white-color);
+  background: var(--primary-dark);
   opacity: 0.25;
   cursor: pointer;
 }
@@ -141,6 +141,25 @@ https://flickity.metafizzy.co
 /* ---- Flickity Datahouse ----*/
 
 
+.carousel-cell {
+  width: 100%;
+  margin-right: 10px;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+/* cell number */
+/* position dots up a bit */
+.flickity-page-dots {
+  bottom: 20rem;
+}
+/* dots are lines */
+.flickity-page-dots .dot {
+  height: 4px;
+  width: 40px;
+  margin: 0;
+  border-radius: 0;
+}
 
 
 /* position dots up a bit */
