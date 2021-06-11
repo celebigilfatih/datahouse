@@ -110,9 +110,8 @@ https://flickity.metafizzy.co
 .flickity-page-dots {
   position: absolute;
   width: 100%;
-  bottom: 2rem;
-  left: 5rem;
-  padding-left: 5rem;
+  bottom: 3.5rem;
+  left: 1rem;
   margin-left: 5rem;
   margin: 0;
   list-style: none;
@@ -123,9 +122,9 @@ https://flickity.metafizzy.co
 
 .flickity-page-dots .dot {
   display: inline-block;
-  width: 7rem;
+  width: 15rem;
   height: .7rem;
-  background: var(--primary-dark);
+  background: var(--white);
   opacity: 0.25;
   cursor: pointer;
 }
@@ -140,26 +139,48 @@ https://flickity.metafizzy.co
 
 /* ---- Flickity Datahouse ----*/
 
+.carousel {
 
-.carousel-cell {
-  width: 100%;
-  margin-right: 10px;
-  border-radius: 5px;
-  counter-increment: carousel-cell;
+  &-cell {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 45rem;
+    grid-template-rows: 1fr 19rem;
+    counter-increment: carousel-cell;
+  }
+
+  &-img {
+
+    grid-column: 1 / -1;
+    align-self: center;
+    justify-self: center;
+
+  }
+
+  &-text {
+
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 2rem 5rem;
+
+
+  }
+
+  &-group {
+
+    background: var(--primary-dark);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
 }
 
 /* cell number */
 /* position dots up a bit */
-.flickity-page-dots {
-  bottom: 20rem;
-}
-/* dots are lines */
-.flickity-page-dots .dot {
-  height: 4px;
-  width: 40px;
-  margin: 0;
-  border-radius: 0;
-}
+
 
 
 /* position dots up a bit */
