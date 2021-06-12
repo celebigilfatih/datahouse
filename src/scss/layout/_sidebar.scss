@@ -1,6 +1,6 @@
 .sidebar {
   display: grid;
-  grid-template-rows: 10rem calc(97vh - 10rem );
+  grid-template-rows: 10.1rem calc(97vh - 10rem );
 
   &__nav {
 
@@ -9,12 +9,104 @@
     justify-content: center;
 
     border-bottom: 1px solid var(--grey);
+    cursor: pointer;
 
 
     &--icon {
       width: 3rem;
       height: 3rem;
       fill: var(--dark);
+    }
+  }
+
+  &__grid {
+
+    display: grid;
+    grid-template-rows: min-content 70vh;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5rem;
+    padding: 5rem;
+  }
+
+  &__logo {
+
+    align-self: center;
+    justify-self: flex-start;
+  }
+
+
+  &__menu {
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    &--title {
+
+      color: var(--white);
+    }
+
+    &--link {
+
+      color: var(--white);
+      display: inline-flex;
+      align-items: center;
+    }
+
+    &--icon {
+
+      width: 4rem;
+      height: 4rem;
+      fill: var(--primary-dark);
+      margin-right: 1.5rem;
+    }
+
+  }
+
+  &__close {
+
+    align-self: center;
+    justify-self: flex-end;
+    color: var(--primary-dark);
+    transition: 0.3s;
+    &--btn {
+      font-size: 5rem;
+      color: var(--primary-dark);
+    }
+  }
+
+  
+  &__overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: var(--dark);
+    overflow-x: hidden;
+    transition: 0.3s;
+  }
+
+  &__overlay--content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  &__overlay a:hover, &__overlay a:focus {
+    color: #f1f1f1;
+  }
+
+
+  @media screen and (max-height: 450px) {
+    &__overlay a {font-size: 20px}
+    &__overlay &__closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
     }
   }
 
