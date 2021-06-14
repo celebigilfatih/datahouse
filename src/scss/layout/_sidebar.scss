@@ -55,12 +55,14 @@
     grid-template-rows: auto;
     grid-row-gap: 5rem;
     grid-column-gap: 2rem;
+    transform: translateY(4rem);
   }
 
   &__feature {
     display: grid;
     grid-template-columns: min-content 1fr;
-    grid-column-gap: 1.5rem;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
 
     &--title {
 
@@ -70,7 +72,7 @@
 
     &--link {
       font-size: 1.8rem;
-      color: var(--grey-dark);
+      color: var(--white);
 
       &:hover, &:hover *  {
         color: var(--primary);
@@ -81,7 +83,7 @@
     &--list {
 
       color: var(--white);
-      line-height: 3rem;
+      line-height: 3.4rem;
       font-style: italic;
     }
 
@@ -90,7 +92,8 @@
       width: 4.6rem;
       height: 4.6rem;
       fill: var(--grey-dark);
-      grid-row: 1/-1;
+      grid-row: 1/ span 2;
+      transform: translateY(-1.5rem);
 
       &:hover {
         color:var(--primary);

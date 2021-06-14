@@ -29,6 +29,18 @@
 }
 
 
+.slider {
+
+    &__img {
+
+        width: 40rem;
+
+        @include respond("big-desktop") {
+
+            width: 70rem;
+        }
+    }
+}
 
 .features {
 
