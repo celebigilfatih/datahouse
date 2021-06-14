@@ -9,15 +9,17 @@
 
     &__link {
 
-        display: flex;
+        display: inline-flex;
         margin-top: 5rem;
-        text-decoration: underline;
         font-weight: bold;
+        padding: 2rem 5rem;
+        border: 1px solid var(--dark);
 
 
         &:hover {
 
             color: var(--primary);
+            border: 1px solid var(--primary);
         }
     }
     &__text {
