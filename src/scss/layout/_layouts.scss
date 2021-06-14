@@ -157,16 +157,17 @@
     }
 }
 
-.map {
+.contact__map {
 
     grid-column: col-start 4 / full-end;
     background-color: aqua;
 
-    #map {
+}
 
-        width: 100%;
-        height: 100%;
-    }
+.map {
+
+    width: 100%;
+    height: 100%;
 }
 
 
