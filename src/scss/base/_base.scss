@@ -16,7 +16,7 @@ body {
 .grid-container {
 
     display: grid;
-    grid-template-rows: 10rem calc(97vh - 24rem) 14rem 45vw repeat((5, min-content));
+    grid-template-rows: 10rem calc(95vh - 10rem) repeat((7, min-content));
     grid-template-columns: 5rem [full-start] 1fr [center-start]repeat(8, [col-start] minmax(min-content, 19rem)[col-end])[center-end] 1fr [full-end sidebar-start] 8rem [sidebar-end];
 }
 
