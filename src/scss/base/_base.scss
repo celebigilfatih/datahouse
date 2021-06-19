@@ -14,10 +14,17 @@ body {
 }
 
 .grid-container {
-
     display: grid;
-    grid-template-rows: [header-start] 10rem [header-end] calc(95vh - 10rem) repeat((7, min-content));
+    grid-template-rows: [header-start] 10rem [header-end] calc(95vh - 24rem) repeat((7, min-content));
     grid-template-columns: 5rem [full-start] 1fr [center-start]repeat(8, [col-start] minmax(min-content, 19rem)[col-end])[center-end] 1fr [full-end sidebar-start] 8rem [sidebar-end];
+
+
+    @include respond("phone") {
+
+        grid-template-rows: [header-start] 10rem [header-end] calc(90vh - 24rem) repeat((7, min-content));
+
+        grid-template-columns: 1.5rem [full-start] 1fr [center-start]repeat(8, [col-start] minmax(min-content, 19rem)[col-end])[center-end] 1fr [full-end] 1.5rem;
+    }
 }
 
  

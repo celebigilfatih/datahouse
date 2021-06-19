@@ -2,6 +2,7 @@
 
 .aboutus {
 
+
     &__paragraph {
 
         margin-top: 3rem;
@@ -26,21 +27,28 @@
 
         padding-right: 3rem;
     }
-}
+    @include respond("phone"){
+        flex-direction: column;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
 
 
-.slider {
+            img {
+    
+                width: 100%;
+                height: auto;
+            }
 
-    &__img {
+        &__text {
 
-        width: 40rem;
-
-        @include respond("big-desktop") {
-
-            width: 70rem;
+            padding-right: 0;
         }
+    
+     
     }
 }
+
+
 
 .features {
 

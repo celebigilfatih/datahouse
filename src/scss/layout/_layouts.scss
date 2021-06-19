@@ -1,10 +1,3 @@
-.sidebar {
-
-    border-left: 1px solid var(--grey);
-    grid-column: sidebar-start / sidebar-end;
-    grid-row: 1/-1;
-
-}
 .slider {
 
     grid-column: full-start / full-end;
@@ -16,30 +9,54 @@
     grid-column: center-start / center-end;
     display: flex;
     align-items: center;
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+
     gap: 10rem;
+
+    @include respond("phone") {
+
+        gap: 5rem;
+    }
+
 }
 
 .services {
 
     grid-column: full-start / full-end;
     display: grid;
-    grid-template-columns: repeat(auto-fit,(minmax(20rem, 1fr)));
-    align-items: center;
-    text-align: center;
-    border-left: 1px solid var(--grey);
-    border-top: 1px solid var(--grey);
-    border-bottom: 1px solid var(--grey);
+    grid-template-columns: repeat(auto-fit,(minmax(18rem, 1fr)));
+    grid-template-rows: 14rem;
 
+    @include respond("phone") {
+        grid-template-rows: repeat(4, 10rem);
+        grid-gap: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    
     &__item {
-        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
+        border: 1px solid var(--grey);
 
-        &:not(:last-child) {
+        &:nth-child(-n+4) {
 
-            border-right: 1px solid var(--grey);
+            border-right: none;
         }
+
+        @include respond("phone") {
+            padding: 1.5rem;
+
+            &:nth-child(-n+4) {
+
+                border: 1px solid var(--grey);
+            }
+        }
+
+
 
         &--link {
 
@@ -121,7 +138,6 @@
 
 }
 
-
 .contact {
 
     grid-column: full-start / col-end 3;
@@ -131,6 +147,11 @@
     flex-direction: column;
     gap: 6rem;
     padding: 5rem;
+
+    @include respond("phone") {
+
+        grid-column: full-start / full-end;
+    }
 
     a {
         color: var(--white);
@@ -160,7 +181,17 @@
 .contact__map {
 
     grid-column: col-start 4 / full-end;
-    background-color: aqua;
+
+
+    @include respond("phone") {
+
+        grid-column: full-start / full-end;
+        height: 40rem;
+        border: 1px solid var(--grey);
+        padding-top: 1.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
 
 }
 
