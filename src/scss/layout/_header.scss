@@ -1,6 +1,7 @@
 .header {
 
     grid-column: full-start / full-end;
+    grid-row: header-start / header-end;
     align-self: center;
 
     display: grid;

@@ -25,6 +25,11 @@
     grid-template-rows: 10rem calc(100vh - 10rem);
     grid-template-columns: 2fr 1fr;
 
+    @include respond("phone") {
+      grid-template-rows: min-content 1fr;
+      grid-template-columns: 1fr min-content;
+    }
+
   }
 
   &__logo {
@@ -32,12 +37,25 @@
     align-self: center;
     justify-self: flex-start;
     padding-left: 5rem;
+
+    @include respond("phone") {
+      padding-left: 1.5rem;
+      
+    }
   }
 
 
   &__menu {
     
     padding-left: 5rem;
+
+    @include respond("phone") {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      padding-left: 1.5rem;
+      grid-column: 1/-1;
+
+    }
 
     &--title {
 
@@ -51,11 +69,14 @@
   &__features {
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, (minmax(45rem, 1fr)));
     grid-template-rows: auto;
     grid-row-gap: 5rem;
-    grid-column-gap: 2rem;
-    transform: translateY(4rem);
+    margin-top: 5rem;
+
+    @include respond("phone") {
+
+    }
   }
 
   &__feature {
@@ -114,6 +135,11 @@
     transition: 0.3s;
     background: var(--primary-dark);
 
+    @include respond("phone") {
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
     &--btn {
       font-size: 5rem;
       color: var(--white);
@@ -130,6 +156,11 @@
     background: var(--primary-dark);
     padding-left: 5rem;
     padding-right: 5rem;
+
+    @include respond("phone") {
+      grid-column: 1/-1;
+      padding: 3rem 1.5rem;
+    }
     &--capsul {
       display: flex;
       flex-direction: column;
@@ -147,7 +178,6 @@
 
     &--map {
 
-      width: 100%;
       height: 32rem;
 
       border: .7rem solid var(--white);
