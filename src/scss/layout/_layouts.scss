@@ -29,7 +29,7 @@
     grid-template-rows: 14rem;
 
     @include respond("phone") {
-        grid-template-rows: repeat(4, 10rem);
+        grid-template-rows: repeat(2, 10rem);
         grid-gap: 1rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
@@ -90,42 +90,9 @@
     padding-bottom: 8vw;
     align-self: center;
 
-    &__title {
+    @include respond("phone") {
 
-        color: var(--white);
-    }
-    &__text {
-        color: var(--white);
-        margin-top: 2rem;
-        margin-bottom: 9rem;
-        width: 75%;
-
-    }
-
-    &__group {
-
-        display: grid;
-        grid-template-columns: repeat( auto-fit, minmax(210px, 1fr) );
-        grid-template-rows: auto;
-        grid-row-gap: 10rem;
-        margin-top: 5rem;
-
-    }
-
-    
-    &__item {
-
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-
-    }
-
-    &__icon {
-
-        width: 6rem;
-        height: 6rem;
-        fill: var(--primary-dark);
+        padding: 5rem 1.5rem;
     }
 
 }
@@ -133,8 +100,8 @@
 .compaines {
 
     grid-column: full-start / full-end;
-    padding-top: 2vw;
-    padding-bottom: 2vw;
+    padding-top: 10vw;
+    padding-bottom: 10vw;
 
 }
 
@@ -175,6 +142,7 @@
         height: 3rem;
         fill: var(--white);
         margin-right: 1rem;
+        flex-shrink: 0;
     }
 }
 
