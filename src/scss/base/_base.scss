@@ -1,30 +1,36 @@
-
-
-
 html {
-    font-size: 62.5%;
-    box-sizing: border-box;
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 body {
-
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-    font-family: var(--font-primary);
-    font-size: var(--default-font-size);
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+  font-family: var(--font-primary);
+  font-size: var(--default-font-size);
 }
 
 .grid-container {
-    display: grid;
-    grid-template-rows: [header-start] 10rem [header-end] calc(95vh - 24rem) repeat((7, min-content));
-    grid-template-columns: 5rem [full-start] 1fr [center-start]repeat(8, [col-start] minmax(min-content, 19rem)[col-end])[center-end] 1fr [full-end sidebar-start] 8rem [sidebar-end];
+  display: grid;
+  grid-template-rows: [header-start] 10rem [header-end] calc(95vh - 24rem) repeat(
+      (7, min-content)
+    );
+  grid-template-columns:
+    5rem [full-start] 1fr [center-start]repeat(
+      8,
+      [col-start] minmax(min-content, 19rem) [col-end]
+    )
+    [center-end] 1fr [full-end sidebar-start] 8rem [sidebar-end];
 
+  @include respond("phone") {
+    grid-template-rows: [header-start] 10rem [header-end] 70vh repeat(
+        (7, min-content)
+      );
 
-    @include respond("phone") {
-
-        grid-template-rows: [header-start] 10rem [header-end] 70vh repeat((7, min-content));
-
-        grid-template-columns: 1.5rem [full-start] 1fr [center-start]repeat(8, [col-start] minmax(min-content, 19rem)[col-end])[center-end] 1fr [full-end] 1.5rem;
-    }
+    grid-template-columns:
+      1.5rem [full-start] 1fr [center-start]repeat(
+        8,
+        [col-start] minmax(min-content, 19rem) [col-end]
+      )
+      [center-end] 1fr [full-end] 1.5rem;
+  }
 }
-
- 

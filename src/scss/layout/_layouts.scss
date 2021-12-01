@@ -1,172 +1,148 @@
 .slider {
+  grid-column: full-start / full-end;
+  display: grid;
 
-    grid-column: full-start / full-end;
-    display: grid;
+  &--title {
+    color: var(--grey);
+  }
+  &--text {
+    color: var(--grey);
+  }
 }
 
 .aboutus {
+  grid-column: center-start / center-end;
+  display: flex;
+  align-items: center;
+  padding-top: 10vw;
+  padding-bottom: 10vw;
 
-    grid-column: center-start / center-end;
-    display: flex;
-    align-items: center;
-    padding-top: 10vw;
-    padding-bottom: 10vw;
+  gap: 10rem;
 
-    gap: 10rem;
-
-    @include respond("phone") {
-
-        gap: 5rem;
-    }
-
+  @include respond("phone") {
+    gap: 5rem;
+  }
 }
 
 .services {
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, (minmax(18rem, 1fr)));
+  grid-template-rows: 14rem;
 
-    grid-column: full-start / full-end;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,(minmax(18rem, 1fr)));
-    grid-template-rows: 14rem;
+  @include respond("phone") {
+    grid-template-rows: repeat(2, 10rem);
+    grid-gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--grey);
+
+    &:nth-child(-n + 4) {
+      border-right: none;
+    }
 
     @include respond("phone") {
-        grid-template-rows: repeat(2, 10rem);
-        grid-gap: 1rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
+      padding: 1.5rem;
 
-    
-    &__item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      &:nth-child(-n + 4) {
         border: 1px solid var(--grey);
-
-        &:nth-child(-n+4) {
-
-            border-right: none;
-        }
-
-        @include respond("phone") {
-            padding: 1.5rem;
-
-            &:nth-child(-n+4) {
-
-                border: 1px solid var(--grey);
-            }
-        }
-
-
-
-        &--link {
-
-            display: flex;
-            align-items: center;
-
-            &:hover{
-
-                
-                transform: scale(1.2);
-                transition: ease-in-out .4s;
-            }
-        }
-    }
-    
-    &__icon {
-        display: inline-flex;
-        width: 4rem;
-        height: 4rem;
-        margin-right: 1.5rem;
+      }
     }
 
+    &--link {
+      display: flex;
+      align-items: center;
+      &:hover {
+        transform: scale(1.2);
+        transition: ease-in-out 0.4s;
+      }
+    }
+  }
+
+  &__icon {
+    display: inline-flex;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1.5rem;
+    fill: var(--text-color);
+  }
 }
 
 .features {
+  grid-column: full-start / full-end;
+  padding-left: 10rem;
+  padding-right: 5rem;
+  padding-top: 5vw;
+  padding-bottom: 8vw;
+  align-self: center;
 
-    grid-column: full-start / full-end;
-    padding-left: 10rem;
-    padding-right: 5rem;
-    padding-top: 5vw;
-    padding-bottom: 8vw;
-    align-self: center;
-
-    @include respond("phone") {
-
-        padding: 5rem 1.5rem;
-    }
-
+  @include respond("phone") {
+    padding: 5rem 1.5rem;
+  }
 }
 
 .compaines {
-
-    grid-column: full-start / full-end;
-    padding-top: 10vw;
-    padding-bottom: 10vw;
-
+  grid-column: full-start / full-end;
+  padding-top: 10vw;
+  padding-bottom: 10vw;
 }
 
 .contact {
+  grid-column: full-start / col-end 3;
+  background-color: var(--dark);
 
-    grid-column: full-start / col-end 3;
-    background-color: var(--primary-dark);
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  padding: 5rem;
 
+  @include respond("phone") {
+    grid-column: full-start / full-end;
+  }
+
+  a {
+    color: var(--white);
+    font-style: italic;
+  }
+
+  &__title {
+    color: var(--white);
+  }
+
+  &__link {
     display: flex;
-    flex-direction: column;
-    gap: 6rem;
-    padding: 5rem;
+    align-items: center;
+  }
 
-    @include respond("phone") {
-
-        grid-column: full-start / full-end;
-    }
-
-    a {
-        color: var(--white);
-        font-style: italic;
-    }
-
-    &__title {
-
-        color: var(--white);
-    }
-
-    &__link {
-
-        display: flex;
-        align-items: center;
-    }
-
-    &__icon {
-
-        width: 3rem;
-        height: 3rem;
-        fill: var(--white);
-        margin-right: 1rem;
-        flex-shrink: 0;
-    }
+  &__icon {
+    width: 3rem;
+    height: 3rem;
+    fill: var(--white);
+    margin-right: 1rem;
+    flex-shrink: 0;
+  }
 }
 
 .contact__map {
+  grid-column: col-start 4 / full-end;
 
-    grid-column: col-start 4 / full-end;
-
-
-    @include respond("phone") {
-
-        grid-column: full-start / full-end;
-        height: 40rem;
-        border: 1px solid var(--grey);
-        padding-top: 1.5rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-
+  @include respond("phone") {
+    grid-column: full-start / full-end;
+    height: 40rem;
+    border: 1px solid var(--grey);
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 .map {
-
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
-
-

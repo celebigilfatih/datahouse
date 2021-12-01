@@ -17,31 +17,31 @@ const   gulp            = require('gulp'),
 const path = {
     prod_build: {
         html: '_production-build/',
-        js: '_production-build/js/',
-        css: '_production-build/css/',
-        img: '_production-build/img/',
-        fonts: '_production-build/fonts/'
+        js: '_production-build/assets/js/',
+        css: '_production-build/assets/css/',
+        img: '_production-build/assets/img/',
+
     },
     dev_build: {
         html: 'dist/',
         js: 'dist/assets/js/',
         css: 'dist/assets/css/',
         img: 'dist/assets/img/',
-        fonts: 'dist/assets/fonts/'
+
     },
     src: {
         html: 'src/*.html',
         js: 'src/js/*.js',
         scss: 'src/scss/main.scss',
         img: 'src/img/**/*.*',
-        fonts: 'src/fonts/**/*.*'
+
     },
     watch: {
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
         scss: 'src/scss/**/*.scss',
         img: 'src/img/**/*.*',
-        fonts: 'src/fonts/**/*.*'
+
     },
     clean: {
         dev_folder: './dist/*',
@@ -131,12 +131,6 @@ function imageProdBuild() {
     .pipe(gulp.dest(path.prod_build.img));
 }
 
-function fontsBuild() {
-    return gulp.src(path.src.fonts)
-    .pipe(gulp.dest(path.dev_build.fonts))
-    .pipe(gulp.dest(path.prod_build.fonts))
-    .pipe(browserSync.stream());
-}
 
 function rootDirFilesBuild() {
     return gulp.src('./src/_root-dir-files/**/*.*')
@@ -159,7 +153,6 @@ function watch() {
     gulp.watch(path.watch.scss, cssDevBuild);
     gulp.watch(path.watch.js, jsDevBuild);
     gulp.watch(path.watch.img, imageDevBuild);
-    gulp.watch(path.watch.fonts, fontsBuild);
     gulp.watch("./src/_root-dir-files/**/*.*", rootDirFilesBuild);
 }
 
@@ -184,9 +177,6 @@ exports.jsProdBuild = jsProdBuild;
 exports.imageDevBuild = imageDevBuild;
 exports.imageProdBuild = imageProdBuild;
 
-// fonts
-exports.fontsBuild = fontsBuild;
-
 // rootDirFiles
 exports.rootDirFilesBuild = rootDirFilesBuild;
 
@@ -202,7 +192,6 @@ async function startDevBuild() {
             cssDevBuild,
             jsDevBuild,
             imageDevBuild,
-            fontsBuild,
             rootDirFilesBuild
             ),
         watch
@@ -220,7 +209,6 @@ async function makeProdBuild() {
             cssProdBuild,
             jsProdBuild,
             imageProdBuild,
-            fontsBuild,
             rootDirFilesBuild
         )
     )();

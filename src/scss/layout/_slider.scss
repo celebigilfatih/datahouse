@@ -1,18 +1,22 @@
 .slider {
+  &__img {
+    width: 40rem;
 
-
-    &__img {
-
-        width: 40rem;
-
-        @include respond("big-desktop") {
-
-            width: 70rem;
-        }
-
-        @include respond("phone") {
-            width: 100%;
-            padding-top: 2rem;
-        }
+    @include respond("big-desktop") {
+      width: 70rem;
     }
+
+    @include respond("phone") {
+      width: 100%;
+      padding-top: 2rem;
+    }
+  }
+
+  &__link {
+    color: var(--white);
+    &:hover {
+      color: var(--dark);
+      text-decoration: underline;
+    }
+  }
 }

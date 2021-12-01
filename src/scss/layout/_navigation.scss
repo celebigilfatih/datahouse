@@ -1,22 +1,18 @@
 .nav {
+  display: flex;
+  align-items: center;
+
+  .navbar {
+    margin: auto;
     display: flex;
-    align-items: center;
+    gap: 8rem;
 
-    .navbar {
-
-        margin: auto;
-        display: flex;
-        gap: 8rem;
-
-       @include respond("phone") {
-
-        display: none;
-       } 
+    @include respond("phone") {
+      display: none;
     }
+
+    &__link:hover {
+      color: var(--primary);
+    }
+  }
 }
-
-
-
-
-
-
