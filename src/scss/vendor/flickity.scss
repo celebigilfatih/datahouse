@@ -6,7 +6,9 @@ https://flickity.metafizzy.co
   position: relative;
 }
 
-.flickity-enabled:focus { outline: none; }
+.flickity-enabled:focus {
+  outline: none;
+}
 
 .flickity-viewport {
   overflow: hidden;
@@ -25,9 +27,9 @@ https://flickity.metafizzy.co
 .flickity-enabled.is-draggable {
   -webkit-tap-highlight-color: transparent;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .flickity-enabled.is-draggable .flickity-viewport {
@@ -58,7 +60,7 @@ https://flickity.metafizzy.co
 
 .flickity-button:focus {
   outline: none;
-  box-shadow: 0 0 0 5px #19F;
+  box-shadow: 0 0 0 5px #19f;
 }
 
 .flickity-button:active {
@@ -82,11 +84,14 @@ https://flickity.metafizzy.co
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  
 }
 
-.flickity-prev-next-button.previous { right: 4rem; }
-.flickity-prev-next-button.next { right: 1rem ; }
+.flickity-prev-next-button.previous {
+  right: 4rem;
+}
+.flickity-prev-next-button.next {
+  right: 1rem;
+}
 /* right to left */
 .flickity-rtl .flickity-prev-next-button.previous {
   left: auto;
@@ -110,25 +115,26 @@ https://flickity.metafizzy.co
 .flickity-page-dots {
   position: absolute;
   width: 100%;
-  bottom: 3.5rem;
+  bottom: 1.5rem;
   left: 5rem;
   margin: 0;
   list-style: none;
   line-height: 1;
 }
 
-.flickity-rtl .flickity-page-dots { direction: rtl; }
+.flickity-rtl .flickity-page-dots {
+  direction: rtl;
+}
 
 .flickity-page-dots .dot {
   display: inline-block;
   width: 15rem;
-  height: .7rem;
+  height: 0.7rem;
   background: var(--white);
   opacity: 0.25;
   cursor: pointer;
 
   @include respond("phone") {
-
     display: none;
   }
 }
@@ -138,59 +144,48 @@ https://flickity.metafizzy.co
   cursor: pointer;
 }
 
-
-
-
 /* ---- Flickity Datahouse ----*/
 
 .carousel {
-
   &-cell {
     height: 100%;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 19rem;
+    grid-template-rows: 1fr 13rem;
     counter-increment: carousel-cell;
 
     @include respond("phone") {
       grid-template-rows: 1fr repeat(2, min-content);
     }
-
   }
 
   &-img {
-
     grid-column: 1 / -1;
     align-self: center;
     justify-self: center;
     text-align: center;
-
   }
 
   &-text {
-
     background-color: var(--dark);
     color: var(--white);
-    padding: 3rem 5rem;
+    padding: 2rem 5rem;
     grid-column: 1 /3;
     @include respond("phone") {
       grid-column: 1/-1;
       padding: 1.5rem;
     }
-
-
   }
 
   &-group {
-
     background: var(--primary-dark);
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: .5rem;
+    gap: 0.5rem;
 
     @include respond("phone") {
       grid-column: 1/-1;
@@ -200,23 +195,13 @@ https://flickity.metafizzy.co
   }
 
   &-icon {
-
     width: 2rem;
     height: 2rem;
     fill: var(--white);
-
   }
-
-
-
-
-
 }
 
 /* cell number */
 /* position dots up a bit */
 
-
-
 /* position dots up a bit */
-

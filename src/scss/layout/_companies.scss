@@ -1,14 +1,11 @@
 .compaines {
-
   &__logo {
-
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     align-items: center;
     justify-items: center;
 
     @include respond("phone") {
-
       grid-row-gap: 3rem;
     }
   }
